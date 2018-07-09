@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>奥菲斯后台管理系统</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="vue, vue-manage-system, manage-system, 后台管理系统, element" />
+    <meta name="description" content="奥菲斯科技基于Vue2 + Element UI 的后台管理系统解决方案" />
+    <link rel="icon shortcut" type="image/x-icon" href="/static/img/favicon.ico">
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CFGReRyGFj0lKSgBI72Hx1GANIn7a005  "></script> -->
+</head>
+<body>
+<div id="app"></div>
+<!--<script src="./static/js/vendor.dll.js"></script>-->
+<!-- <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b455f7e1c6ca6e239edaccf0e6aa11fb";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script> -->
+
+</body>
+<script>
+    // 屏蔽右键事件，后续增加自制的右键功能
+    document.oncontextmenu = function(){
+        event.returnValue = false;
+    }
+    //屏幕变化时自动获取屏幕剩余的高度，赋值给内容区域
+    window.onload = window.onresize = function(){
+        var windowH = document.documentElement.clientHeight||document.body.clientHeight;
+        var contentH = document.getElementsByClassName("content");
+        if(contentH[0]){ 
+            contentH[0].style.height = (windowH - 160) + 'px';
+        }
+    }
+</script>
+</html>
